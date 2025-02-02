@@ -1,0 +1,18 @@
+.mainPageTop {
+    min-height: var(--minus-HeaderHeight);
+}
+
+.mainImage {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    max-width: 700px;
+}
+
+// .mainImageShadow {
+//     position: absolute;
+//     inset: 0;
+//     box-shadow: inset 0px 0px 30px 5px rgba(0, 0, 0, 0.8);
+// }

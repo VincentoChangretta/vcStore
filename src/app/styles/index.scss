@@ -4,6 +4,8 @@
 @use "variables/global.scss";
 
 .app {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background: var(--mainBg);
     color: var(--mainBg-inv);
@@ -11,7 +13,17 @@
 }
 
 .container {
-    max-width: 1320px;
+    max-width: 1820px;
     padding: 0 10px;
     margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -1,0 +1,14 @@
+.paddingLink {
+    position: relative;
+    padding: 12px 25px 12px 55px;
+    border-radius: 30px;
+    background: var(--padding-link);
+}
+
+.icon {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: inherit;
+}

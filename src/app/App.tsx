@@ -1,4 +1,4 @@
-import { ThemeButton } from "shared/ui/ThemeButton/ThemeButton";
+import { MainPage } from "pages/MainPage";
 import { useTheme } from "./providers/ThemeProvider/";
 import { Header } from "widgets/Header/Header";
 
@@ -7,10 +7,11 @@ export const App = () => {
 
   return (
     <div className={`app ${theme}`}>
-      <Header/>
-      <main>
-
+      <Header />
+      <main className="main">
+        <MainPage />
       </main>
+      <footer>footer</footer>
     </div>
   );
 };
