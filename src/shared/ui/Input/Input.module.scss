@@ -1,0 +1,32 @@
+.inputBox {
+    position: relative;
+    background: var(--padding-link);
+    border-radius: var(--std-radius);
+}
+
+.input {
+    padding: 32px 35px 25px 30px;
+    color: var(--mainBg-inv);
+    border-radius: var(--std-radius);
+    transition: var(--small-transition);
+}
+
+.input:focus {
+    box-shadow: 0 0 0px 2px var(--mainBg-inv);
+}
+
+.small {
+    width: 300px;
+}
+
+.full {
+    width: 100%;
+}
+
+.absolutePlaceholder {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    font-size: var(--smallest-font);
+    color: var(--inputAbsolutePlaceholder);
+}

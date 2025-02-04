@@ -1,3 +1,11 @@
-.button{
-    
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    padding: 20px;
+    background: var(--mainBg-inv);
+    color: var(--mainBg);
+    border-radius: var(--std-radius);
+    font-weight: 700;
 }

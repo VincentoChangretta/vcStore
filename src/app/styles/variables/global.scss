@@ -1,9 +1,17 @@
 :root {
-    --main-font: 18px / 26px "Montserrat", sans-serif;
+    --main-font: 18px / 26px "Outfit", sans-serif;
+    --smallest-font: 14px;
+
+    --main-title-size: 50px;
+    --main-subtitle-size: 24px;
+
     --icon-size: 30px;
     --logo-classic-fontSize: 35px;
 
     --headerHeight: 100px;
     --minus-HeaderHeight: calc(100svh - 100px);
 
+    --std-radius: 30px;
+
+    --small-transition: .2s all 
 }

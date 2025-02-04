@@ -1,0 +1,25 @@
+.errorPage {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #18063a;
+    color: #fff;
+    font:
+        18px "Outfit",
+        sans-serif;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.inner h2 {
+    font-size: 55px;
+}

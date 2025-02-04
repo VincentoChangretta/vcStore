@@ -4,13 +4,13 @@ import { classNames } from "shared/lib/classNames/classNames";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
   const { className, children, ...otherProps } = props;
   return (
-    <button className={classNames(cls.Button, {}, [className])} {...otherProps}>
+    <button className={classNames(cls.button, {}, [className])} {...otherProps}>
       {children}
     </button>
   );

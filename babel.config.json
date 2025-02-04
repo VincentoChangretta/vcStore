@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "@babel/preset-env", // поддержка es6
+    "@babel/preset-typescript", // поддержка ts
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}
+
+
+//jest работает с commonJs поэтому через babel даем разрешение для использования es6 и ts

@@ -1,0 +1,42 @@
+.logInTop {
+    position: fixed;
+    top: var(--headerHeight);
+    left: 0;
+    right: 0;
+    background: var(--mainBg);
+}
+
+.inputInner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: var(--minus-HeaderHeight);
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+}
+
+.titleInner {
+    margin-bottom: 30px;
+}
+
+.toBackLink {
+    display: block;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.backIcon {
+    margin-right: 10px;
+}

@@ -2,6 +2,7 @@
 @use "themes/dark.scss";
 @use "themes/light.scss";
 @use "variables/global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
 
 .app {
     display: flex;
@@ -26,4 +27,26 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.title {
+    font-size: var(--main-title-size);
+}
+
+.subtitle {
+    font-size: var(--main-subtitle-size);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    width: 100%;
+    padding: 20px;
+    font: var(--main-font);
+    color: #18063a;
+    background: #fff;
+    border-radius: var(--std-radius);
+    font-weight: 700;
 }

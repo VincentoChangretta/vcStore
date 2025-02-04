@@ -70,7 +70,7 @@ export const HeaderNav: FC<HeaderNavProps> = (props) => {
       <ul className={cls.nav}>
         {toFunctional
           ? mainRoutes.toFunctional.map((route) => (
-              <li>
+              <li key={route.pathname}>
                 <AppLink
                   to={route.pathname}
                   theme={route.theme}
@@ -81,7 +81,7 @@ export const HeaderNav: FC<HeaderNavProps> = (props) => {
               </li>
             ))
           : mainRoutes.toPages.map((route) => (
-              <li>
+              <li key={route.pathname}>
                 <AppLink
                   to={route.pathname}
                   theme={route.theme}
