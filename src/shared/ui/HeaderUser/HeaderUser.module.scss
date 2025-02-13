@@ -1,5 +1,25 @@
-.imgBox{
-    max-width: 30px;
+.headerUser{
+    position: relative;
+    cursor: pointer;
+}
+
+.paddingLink {
+    position: relative;
+    padding: 9px 25px 9px 25px;
+    border-radius: 30px;
+    background: var(--padding-link);
+    font: var(--main-font);
+}
+
+.imgBox {
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

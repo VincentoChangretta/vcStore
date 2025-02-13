@@ -1,5 +1,5 @@
 import { Input, InputTheme } from "shared/ui/Input/ui/Input";
-import cls from "./LogInForm.module.scss";
+import cls from "./CreateAccountForm.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui/Button/Button";
 import { addUser } from "features/users/api/addUser";
@@ -7,15 +7,27 @@ import { inputNames } from "shared/ui/Input/config/types";
 import { useNavigate } from "react-router-dom";
 import { RoutePath } from "shared/routeConfig/RouteConfig";
 import { useDispatch } from "react-redux";
-import { addActiveUser, LOCALSTORE_ACTIVE_USER } from "app/store/slices/activeUserSlice";
+import {
+  addActiveUser,
+  LOCALSTORE_ACTIVE_USER,
+} from "app/store/slices/activeUserSlice";
+import { useContext } from "react";
+import {
+  CreateAccContext,
+  createAccVariationsTypes,
+} from "pages/LogInPage/ui/LogIn";
+import { addNewUser } from "app/store/slices/newUserSlice";
 
 interface LogInFormProps {
   className?: string;
 }
 
-export const LogInForm = ({ className }: LogInFormProps) => {
+export const CreateAccountForm = ({ className }: LogInFormProps) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { setCreateAccVariation } = useContext(CreateAccContext);
+
   const createNewUser = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -30,9 +42,8 @@ export const LogInForm = ({ className }: LogInFormProps) => {
 
     try {
       const result = await addUser({ name, lastName, email, login, password });
-      localStorage.setItem(LOCALSTORE_ACTIVE_USER, JSON.stringify(result))
-      dispatch(addActiveUser(result));
-      navigate(RoutePath.main);
+      dispatch(addNewUser(result));
+      setCreateAccVariation(createAccVariationsTypes.CREATE_SET_INFO);
     } catch (error) {
       navigate(RoutePath.error);
     }

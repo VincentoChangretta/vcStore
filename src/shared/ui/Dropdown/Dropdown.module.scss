@@ -1,0 +1,14 @@
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: var(--padding-link);
+    transition: 0.3s;
+    clip-path: inset(0 0 100% 0);
+}
+
+.open {
+    clip-path: inset(0 0 0 0);
+}

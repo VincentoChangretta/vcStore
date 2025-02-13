@@ -1,4 +1,4 @@
-import { AppLink } from "shared/ui/AppLink/AppLink";
+import { AppLink, AppLinkThemes } from "shared/ui/AppLink/AppLink";
 import cls from "./HeaderNav.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { FC, useEffect, useState } from "react";
@@ -17,7 +17,6 @@ interface HeaderNavProps {
 
 export const HeaderNav: FC<HeaderNavProps> = (props) => {
   const { className, toFunctional, toPages } = props;
-
   const [functionalNav, setFunctionalNav] = useState(
     headerNavRoutes.toFunctional
   );
@@ -31,16 +30,22 @@ export const HeaderNav: FC<HeaderNavProps> = (props) => {
         (route) => !lowerCaseCompare(route.name, AppRoutes.LOGIN)
       );
       setFunctionalNav(filteredNav);
+    } else {
+      setFunctionalNav(headerNavRoutes.toFunctional);
     }
   }, [activeUser]);
-
 
   return (
     <nav className={classNames(cls.nav)}>
       <ul className={cls.nav}>
         {functionalNav && toFunctional ? (
           <>
-            {activeUser && <HeaderUser userData={activeUser} />}
+            {activeUser && (
+              <HeaderUser
+                theme={AppLinkThemes.PADDING_LINK}
+                userData={activeUser}
+              />
+            )}
             {functionalNav.map((route) => (
               <li key={route.name}>
                 <AppLink
