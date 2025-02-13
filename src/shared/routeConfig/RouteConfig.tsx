@@ -1,6 +1,7 @@
 import { LogIn } from "pages/LogInPage";
 import { MainPage } from "pages/MainPage";
 import { RouteProps } from "react-router-dom";
+import { ErrorPage } from "widgets/ErrorPage";
 
 export enum AppRoutes {
   MAIN = "main",
@@ -9,6 +10,7 @@ export enum AppRoutes {
   BLOG = "blog",
   LOGIN = "login",
   BASKET = "basket",
+  ERROR = "error",
   NOT_FOUND = "not_found",
 }
 
@@ -19,6 +21,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.BLOG]: "/blog",
   [AppRoutes.LOGIN]: "/login",
   [AppRoutes.BASKET]: "/basket",
+  [AppRoutes.ERROR]: "/error",
   [AppRoutes.NOT_FOUND]: "*",
 };
 
@@ -46,6 +49,10 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.BASKET]: {
     path: RoutePath.basket,
     element: "123",
+  },
+  [AppRoutes.ERROR]: {
+    path: RoutePath.error,
+    element: <ErrorPage/>,
   },
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,

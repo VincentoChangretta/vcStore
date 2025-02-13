@@ -2,7 +2,7 @@ import { ThemeButton } from "shared/ui/ThemeButton/ThemeButton";
 import cls from "./Header.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Logo } from "widgets/Logo/Logo";
-import { HeaderNav } from "./HeaderNavs/HeaderNav";
+import { HeaderNav } from "./HeaderNavs/ui/HeaderNav";
 
 interface HeaderProps {
   className?: string;
